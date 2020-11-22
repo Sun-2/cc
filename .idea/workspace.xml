@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c9a21fdc-18bf-4ad9-b141-64f31d40837d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1kf54Kr4fbDUfo2IMCp8iKNshBW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.js" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="server/dist/index.js" working-dir="$PROJECT_DIR$">
+      <method v="2">
+        <option name="TypeScript.Before.Run" enabled="true" FAIL_ON_ERROR="true" CONFIG_PATH="$PROJECT_DIR$/server/tsconfig.json" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c9a21fdc-18bf-4ad9-b141-64f31d40837d" name="Default Changelist" comment="" />
+      <created>1606078614021</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606078614021</updated>
+      <workItem from="1606078616182" duration="5117000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/server/src/index.js" />
+        <option value="$PROJECT_DIR$/server/src/index.d.ts.map" />
+        <option value="$PROJECT_DIR$/server/src/index.js.map" />
+        <option value="$PROJECT_DIR$/server/src/index.d.ts" />
+        <option value="$PROJECT_DIR$/command-builder/src/index.js" />
+        <option value="$PROJECT_DIR$/command-builder/src/index.d.ts.map" />
+        <option value="$PROJECT_DIR$/command-builder/src/index.js.map" />
+        <option value="$PROJECT_DIR$/command-builder/src/index.d.ts" />
+      </list>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-5" y="500" width="1894" height="1105" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606084446476">
+      <screen x="0" y="525" width="1920" height="1080" />
+    </state>
+    <state x="-5" y="500" width="1894" height="1105" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.525.1920.1080/1920.0.1080.1920@1920.0.1080.1920" timestamp="1606084446476" />
+    <state width="1038" height="564" key="GridCell.Tab.0.bottom" timestamp="1606084483578">
+      <screen x="1920" y="0" width="1080" height="1920" />
+    </state>
+    <state width="1038" height="564" key="GridCell.Tab.0.bottom/0.525.1920.1080/1920.0.1080.1920@1920.0.1080.1920" timestamp="1606084483578" />
+    <state width="1038" height="564" key="GridCell.Tab.0.center" timestamp="1606084483578">
+      <screen x="1920" y="0" width="1080" height="1920" />
+    </state>
+    <state width="1038" height="564" key="GridCell.Tab.0.center/0.525.1920.1080/1920.0.1080.1920@1920.0.1080.1920" timestamp="1606084483578" />
+    <state width="1038" height="564" key="GridCell.Tab.0.left" timestamp="1606084483578">
+      <screen x="1920" y="0" width="1080" height="1920" />
+    </state>
+    <state width="1038" height="564" key="GridCell.Tab.0.left/0.525.1920.1080/1920.0.1080.1920@1920.0.1080.1920" timestamp="1606084483578" />
+    <state width="1038" height="564" key="GridCell.Tab.0.right" timestamp="1606084483578">
+      <screen x="1920" y="0" width="1080" height="1920" />
+    </state>
+    <state width="1038" height="564" key="GridCell.Tab.0.right/0.525.1920.1080/1920.0.1080.1920@1920.0.1080.1920" timestamp="1606084483578" />
+    <state x="-5" y="525" width="1894" height="1080" key="SettingsEditor" timestamp="1606078705958">
+      <screen x="0" y="525" width="1920" height="1080" />
+    </state>
+    <state x="-5" y="525" width="1894" height="1080" key="SettingsEditor/0.525.1920.1080/1920.0.1080.1920@1920.0.1080.1920" timestamp="1606078705958" />
+  </component>
+</project>

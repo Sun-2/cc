@@ -1,0 +1,8 @@
+{
+  "name": "cc",
+  "private": true,
+  "workspaces": [
+    "command-builder",
+    "server"
+  ]
+}

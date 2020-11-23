@@ -4,3 +4,4 @@ tsconfig.tsbuildinfo
 .vscode
 .history
 yarn-error.log
+.eslintcache

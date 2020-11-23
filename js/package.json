@@ -3,6 +3,8 @@
   "private": true,
   "workspaces": [
     "command-builder",
-    "server"
+    "server",
+    "antlr",
+    "lua"
   ]
 }

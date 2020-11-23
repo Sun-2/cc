@@ -65,6 +65,12 @@
 
     /* Advanced Options */
     "skipLibCheck": true /* Skip type checking of declaration files. */,
-    "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
+    "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */,
+    "baseUrl": "./",
+    "paths": {
+      "@cc/antlr": ["./antlr/src"],
+      "@cc/command-builder": ["./command-builder/src"],
+      "@cc/server": ["./server/src"]
+    }
   }
 }

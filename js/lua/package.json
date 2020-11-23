@@ -1,0 +1,14 @@
+{
+  "name": "@cc/lua",
+  "version": "0.0.1",
+  "scripts": {
+    "clean": "rm -rf scripts-ts/* scripts/*",
+    "gen": "yarn clean && yarn ts-node generate.ts && yarn tsc --build"
+  },
+  "dependencies": {
+    "@types/node": "^14.14.9",
+    "luabundle": "^1.6.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.1.2"
+  }
+}

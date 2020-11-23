@@ -1,6 +1,5 @@
-export declare type Args = {
+export declare type sayHelloArgs = {
     name: string;
 };
-declare const _default: (args: Args) => string;
-export default _default;
+export declare const sayHello: (args: sayHelloArgs) => string;
 //# sourceMappingURL=sayHello.d.ts.map

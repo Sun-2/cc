@@ -1,5 +1,6 @@
-const { bundleString } = require("luabundle");
-const { promises: fsp } = require("fs");
+import { bundleString } from "luabundle";
+import { promises as fsp } from "fs";
+import * as luamin from "luamin";
 
 const stringify = any =>
   JSON.stringify(any)
@@ -10,7 +11,7 @@ const bundleOptions = {
   paths: ["./libs/?.lua"]
 };
 
-function generate(source) {
+function generate(source: string, funcName: string) {
   const types: string[] = [];
 
   const re = /local\s+(.*?)(?:=|\s)[^\n\r]+?type:(.*)$/gm;
@@ -20,11 +21,11 @@ function generate(source) {
     const [, varName, varType] = match;
     types.push(`${varName}: ${varType};\n`);
   }
-  const wrappedTypes = `export type Args = {\n${types.join("")}} ${
+  const wrappedTypes = `export type ${funcName}Args = {\n${types.join("")}} ${
     !types.length ? "| undefined" : ""
   };`;
 
-  const bundled = bundleString(source, bundleOptions);
+  const bundled = luamin.minify(bundleString(source, bundleOptions));
 
   const string = stringify(bundled)
     .replace(/\u2028/g, "\\u2028")
@@ -35,7 +36,7 @@ function generate(source) {
     ${wrappedTypes}
     
     const varRegex = /"%{(.*?)}%"/g;
-    export default (args: Args) => ${string}.replace(varRegex, (str) => {
+    export const ${funcName} = (args: ${funcName}Args) => ${string}.replace(varRegex, (str) => {
     const varName = str.match(/"%{(.*?)}%"/)![1];
     // @ts-ignore
     if (args && varName in args) return args[varName];
@@ -59,8 +60,14 @@ function generate(source) {
     scriptStrings.map((str, i) =>
       fsp.writeFile(
         `./scripts-ts/${scriptFiles[i].replace(/\.lua$/, ".ts")}`,
-        generate(str)
+        generate(str, scriptFiles[i].replace(/\..*/, ""))
       )
     )
+  );
+
+  const exportPaths = scriptFiles.map(file => `${file.replace(/\.lua$/, "")}`);
+  await fsp.writeFile(
+    "./scripts-ts/index.ts",
+    exportPaths.map(file => `export * from "./${file}"`).join("\n")
   );
 })();

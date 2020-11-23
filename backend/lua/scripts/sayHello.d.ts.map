@@ -1,1 +1,1 @@
-{"version":3,"file":"sayHello.d.ts","sourceRoot":"","sources":["../scripts-ts/sayHello.ts"],"names":[],"mappings":"AACI,oBAAY,IAAI,GAAG;IACvB,IAAI,EAAE,MAAM,CAAC;CACZ,CAAE;+BAGuB,IAAI;AAA1B,wBAKC"}
+{"version":3,"file":"sayHello.d.ts","sourceRoot":"","sources":["../scripts-ts/sayHello.ts"],"names":[],"mappings":"AACI,oBAAY,YAAY,GAAG;IAC/B,IAAI,EAAE,MAAM,CAAC;CACZ,CAAE;AAGC,eAAO,MAAM,QAAQ,SAAU,YAAY,WAK3C,CAAC"}

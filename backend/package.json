@@ -2,9 +2,7 @@
   "name": "cc",
   "private": true,
   "workspaces": [
-    "command-builder",
     "server",
-    "antlr",
     "lua"
   ]
 }

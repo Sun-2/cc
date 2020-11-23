@@ -1,3 +1,0 @@
-interface sayHello {
-  (): void
-}

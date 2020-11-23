@@ -24,6 +24,7 @@ export const makeDispatcher = conn =>
         };
         conn.addEventListener("message", listener);
 
+        // @ts-ignore
         conn.send(JSON.stringify({ id, type: "execute", code: func(...args) }));
       });
     return acc;

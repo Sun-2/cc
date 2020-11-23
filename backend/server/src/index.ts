@@ -1,37 +1,33 @@
-import { Server } from "ws";
+import * as ws from "ws";
 import * as http from "http";
+import { connection, server as WebSocketServer } from "websocket";
 import { sayHello } from "@cc/lua";
-import { makeDispatcher } from "@cc/server/dispatchRequest";
+import { makeDispatcher } from "./dispatchRequest";
+import { ConnectionManager } from "@cc/server/ConnectionManager";
 
-console.log(sayHello({ name: '"ASd"' }));
+const server = http.createServer();
 
-const ws = new Server(
-  {
-    port: 8080
-  },
-  () => console.log("Listening.")
-);
+server.listen(8080);
 
-ws.on("connection", conn => {
-  console.log("connected");
-  const dispatcher = makeDispatcher(conn);
-  dispatcher.sayHello({ name: "asd" });
-  dispatcher.move({ direction: "left" });
+const wsServer = new WebSocketServer({
+  httpServer: server,
+  autoAcceptConnections: true
+});
 
-  conn.on("message", msg => {
-    console.log("msg: %s", msg);
+const connectionManager = new ConnectionManager();
+
+wsServer.on("request", function(request) {
+  const connection = request.accept();
+
+  connection.on("message", function(message) {
+    const data = JSON.parse(message.utf8Data!);
+
+    if ((data.type = "greeting")) {
+      connectionManager.addConnection(data.id, connection);
+    }
   });
 
-  setTimeout(() => {
-    conn.send(
-      JSON.stringify({
-        id: "asd",
-        type: "execute",
-        code: `function()
-    print("Hello!")
-    return "asd"
-end`
-      })
-    );
-  }, 500);
+  connection.on("close", function(reasonCode, description) {
+    connectionManager.removeConnection(connection);
+  });
 });
